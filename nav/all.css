@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar
+{
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track
+{
+  background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb
+{
+  background: #888;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+{
+  background: #555; 
+}
+.topnav {
+  background-color: #333;
+  /* background: linear-gradient(90deg,#da00ff,#ffeb3b); */
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.active {
+  /* background-color: #333; */
+  color: white;
+}
+a.user
+{
+  float: right;
+}
+.topnav .icon {
+  display: none;
+}
+.topnav a:hover{
+  background-color: #555;
+  color: white;
+}
+@media screen and (max-width: 991px) {
+  .topnav a:not(:first-child){
+    display: none;
+    float: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 991px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    float: none;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  a.user{
+    float: none;
+  }
+}
+.toggle
+{
+  position: relative;
+  width: 10.3vh;
+  height: 10.8vh;
+  background: url(../images/menu.png);
+  background-repeat: no-repeat;
+  background-size: 11px 11px;
+  background-position: center;
+  cursor: pointer;  
+}
+.toggle.active
+{
+  background: url(../images/close.png);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: center;
+  cursor: pointer;  
+}
+.mode
+{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  transition: 1s;
+}
+.mode-content 
+{
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+@-webkit-keyframes animatetop 
+{
+  from 
+  {
+    top:-300px;
+    opacity:0;
+  } 
+  to 
+  {
+    top: 0;
+    opacity: 1;
+  } 
+}
+@keyframes animatetop 
+{
+  from 
+  {
+    top:-300px;
+    opacity:0
+  }
+  to 
+  {
+    top: 0;
+    opacity: 1;
+  } 
+}
+.cle 
+{
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.cle:hover,
+.cle:focus 
+{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.mode-header 
+{
+  padding: 8px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+.mode-body 
+{
+    padding: 2px 16px;
+}
+#myBtn
+{
+    cursor: pointer;
+}
+.mode-footer 
+{
+  padding: 16px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+.text
+{            
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.footer
+{
+    background: #162c3b;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;        
+}
+.footer ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+}
+.footer ul li
+{
+    list-style: none;
+}
+.footer ul li a
+{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+.footer ul li a img
+{
+    filter: invert(1);
+    max-width: 20px;
+}
+@media (max-width: 991px)
+{
+    .footer
+    {
+        padding: 20px 50px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .footer ul
+    {
+        margin-bottom: 5px;
+    }
+    .text
+    {
+        margin-bottom: 5px;
+    }
+} 
+.btn 
+{
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary 
+{
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  cursor: pointer;
+}
+.btn-primary:hover 
+{
+  /* color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc; */
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+  cursor: pointer;
+}
+.form input[type="text"],
+.form input[type="password"]
+{
+	position: relative;
+	width: 70%;
+	padding: 10px;
+	background: #f5f5f5;
+	color: #333;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	margin: 8px 0;
+  font-size: 14px;
+  margin-left: 15%;
+	letter-spacing: 1px;
+  font-weight: 300;
+  transition: 1s;
+}
+.form input[type="submit"]
+{
+  max-width: 100px;
+	background: #677eff;
+	color: #fff;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	transition: 0.5s;
+}
+@media (max-width: 991px)
+{
+  .mode .mode-content .mode-header
+  {
+    max-width: 1000px;
+  }
+  .mode .mode-content .mode-body
+  {
+    max-width: 1000px;
+  }
+  .mode .mode-content .mode-body .form input
+	{
+		max-width: 100%;
+	}
+}
+.ion
+{
+	background: #0f3959;
+  min-height: 160vh;
+}
+.sec
+{
+	position: absolute;
+  width: 100%;
+	height: calc(100% - 190px);
+	background: #2abbff;
+}
+.sec .ma
+{
+	color: #fff;
+	text-align: center;
+	font-size: 1.5em;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.sec .cl
+{
+	position: absolute;
+	bottom: -190px;
+	height: 190px;
+	width: 100%;
+	transform-origin: top;
+}
+.sec .cl img
+{
+	width: 100%;
+	height: 100%;
+}
+@media (max-width: 991px)
+{
+  .sec
+  {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 95px);
+    background: #2abbff;
+  }
+  .sec .ma
+  {
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .sec .cl
+  {
+    position: absolute;
+    bottom: -95px;
+    height: 95px;
+    width: 100%;
+    transform-origin: top;
+  }
+  .sec .cl img
+  {
+    width: 100%;
+    height: 100%;
+  }
+}

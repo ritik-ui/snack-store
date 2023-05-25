@@ -1,0 +1,5 @@
+in umain we have to add an add to cart button<a> in similar items segment
+bought together
+
+add and edit details and store info pin code
+add and edit items 
